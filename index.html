@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated space backdrop: stars + drifting mathematical symbols. -->
+    <div class="space-backdrop" aria-hidden="true">
+        <div class="nebula nebula-a"></div>
+        <div class="nebula nebula-b"></div>
+        <div class="starfield"></div>
+        <div class="math-field" id="mathField"></div>
+    </div>
+
+    <main class="calculator" id="calculator">
+
+        <div class="mode-toggle" role="tablist" aria-label="Calculator mode">
+            <button class="mode-btn active" id="mode-basic" role="tab" aria-selected="true">Basic</button>
+            <button class="mode-btn" id="mode-scientific" role="tab" aria-selected="false">Scientific</button>
+        </div>
+
+        <div class="display">
+            <div class="previous-display"></div>
+            <div class="current-display">0</div>
+        </div>
+
+        <div class="keypad">
+            <div class="sci-panel" id="sciPanel">
+                <button class="btn btn-sci">(</button>
+                <button class="btn btn-sci">)</button>
+                <button class="btn btn-sci">π</button>
+                <button class="btn btn-sci">e</button>
+                <button class="btn btn-sci">√</button>
+                <button class="btn btn-sci">x²</button>
+                <button class="btn btn-sci">xʸ</button>
+                <button class="btn btn-sci">1/x</button>
+                <button class="btn btn-sci">sin</button>
+                <button class="btn btn-sci">cos</button>
+                <button class="btn btn-sci">tan</button>
+                <button class="btn btn-sci">log</button>
+                <button class="btn btn-sci">ln</button>
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-func">AC</button>
+                <button class="btn btn-func">⌫</button>
+                <button class="btn btn-func">%</button>
+                <button class="btn btn-op">÷</button>
+
+                <button class="btn btn-num">7</button>
+                <button class="btn btn-num">8</button>
+                <button class="btn btn-num">9</button>
+                <button class="btn btn-op">×</button>
+
+                <button class="btn btn-num">4</button>
+                <button class="btn btn-num">5</button>
+                <button class="btn btn-num">6</button>
+                <button class="btn btn-op">−</button>
+
+                <button class="btn btn-num">1</button>
+                <button class="btn btn-num">2</button>
+                <button class="btn btn-num">3</button>
+                <button class="btn btn-op">+</button>
+
+                <button class="btn btn-func">+/-</button>
+                <button class="btn btn-num">0</button>
+                <button class="btn btn-num">.</button>
+                <button class="btn btn-equals">=</button>
+            </div>
+        </div>
+
+        <div class="history">
+            <div class="history-header">
+                <h2>History</h2>
+                <button id="clear-history">Clear</button>
+            </div>
+
+            <div id="history-list">
+                <p class="history-empty">No calculations yet</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
